@@ -37,3 +37,6 @@ yarn-debug.log*
 
 #Ignore db
 config/database.yml
+
+#yarn log
+yarn.log
