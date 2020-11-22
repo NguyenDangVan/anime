@@ -31,10 +31,13 @@ User.create name: "Chucml",
 
 Genre.create name: "Fantasy",
 						 description: ""
+Genre.create name: "Shounen",
+						 description: ""
 
 MovieGenre.create movie_id: 1,
 									genre_id: 1
 
 Subtitle.create language: "English"
+Subtitle.create language: "Viet Name"
 MovieSubtitle.create movie_id: 1,
-											subtitle_id: 1
+										 subtitle_id: 1
