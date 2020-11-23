@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_11_22_093747) do
+ActiveRecord::Schema.define(version: 2020_11_23_183017) do
 
   create_table "episodes", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 ROW_FORMAT=COMPRESSED", force: :cascade do |t|
     t.bigint "movies_id", null: false
@@ -50,7 +50,7 @@ ActiveRecord::Schema.define(version: 2020_11_22_093747) do
   create_table "movies", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 ROW_FORMAT=COMPRESSED", force: :cascade do |t|
     t.string "title", default: "", null: false
     t.string "original_title"
-    t.string "movie_image"
+    t.text "image_data"
     t.integer "movie_type", null: false
     t.text "content"
     t.integer "status", null: false
