@@ -19,6 +19,12 @@ Movie.create title: "Mahouka Koukou no Rettousei: Raihousha-hen [SS2]",
 						 status: 1,
 						 aried: "2020-10-03"
 
+Movie.create title: "Demon Slayer: Kimetsu no Yaiba", movie_type: 0, status: 1, aried: "2020-10-03"
+Movie.create title: "Attack on titan", movie_type: 0, status: 1, aried: "2020-10-03"
+Movie.create title: "Black Clover", movie_type: 0, status: 1, aried: "2020-10-03"
+Movie.create title: "The Promised Neverland", movie_type: 0, status: 1, aried: "2020-10-03"
+
+
 User.create name: "Vannd",
 						email: "dinvvan@gmail.com",
 						password: 123456,

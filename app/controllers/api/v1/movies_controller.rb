@@ -26,7 +26,7 @@ class Api::V1::MoviesController < ApplicationController
 
   def destroy
   	@movie&.destroy
-  	render json { message: "Movie is deleted!" }
+  	render json: { message: "Movie is deleted!" }
   end
 
   private
