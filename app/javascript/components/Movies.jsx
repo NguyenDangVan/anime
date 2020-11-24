@@ -19,7 +19,7 @@ class Movies extends React.Component {
 			throw new Error("Network response was bad.");
 		})
 		.then(response => this.setState({ movies: response }))
-		.catch(() => this.props.hitory.push("/"));
+		.catch(() => this.props.history.push("/"));
 	}
 
 
