@@ -1,7 +1,7 @@
 class Api::V1::MoviesController < ApplicationController
 	before_action :load_movie, only: %i(show destroy)
 
-  def index
+	def index
   	movies = Movie.all.order created_at: :desc
   	render json: movies
   end

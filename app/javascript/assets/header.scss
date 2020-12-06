@@ -1,0 +1,126 @@
+.header {
+  display: flex;
+  height: 64px;
+  width: 100%;
+  background-color: #142851;
+
+  font-family: "Source Sans Pro", Arial, sans-serif;
+  font-weight: bold;
+
+  a {
+    color: #fff;
+    font-weight: 600;
+    cursor: pointer;
+  }
+
+  a.logo {
+    display: block;
+    margin-right: 16px;
+  }
+
+  ul {
+    display: flex;
+    flex-wrap: nowrap;
+    white-space: nowrap;
+    align-items: center;
+  }
+
+  li {
+    list-style: none;
+    cursor: pointer;
+  }
+}
+
+.content {
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+}
+
+.sub_media {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  top: 0;
+  left: 0;
+  max-width: 1300px;
+  width: 100vw;
+  padding: 0 40px;
+}
+
+.nav_wrapper {
+  display: flex;
+  flex-wrap: nowrap;
+  white-space: nowrap;
+  align-items: center;
+  overflow: visible;
+}
+
+.logo {
+  img {
+    display: block;
+    width: 154px;
+    height: 20px;
+    background: url(https://www.themoviedb.org/assets/2/v4/logos/v2/blue_short-8e7b30f73a4020692ccca9c88bafe5dcb6f8a62a4c6bc55cd9ba82bb2cd95f6c.svg) no-repeat;
+  }
+}
+
+.dropdown_menu {
+  color: white;
+  width: auto;
+  margin: 0;
+
+  li {
+    margin-right: 14px;
+  }
+}
+
+
+// flex - right menu
+.flex {
+  display: flex;
+  flex-wrap: nowrap;
+  white-space: nowrap;
+  justify-content: flex-end;
+  overflow: visible;
+
+  ul {
+    justify-content: flex-end;
+    margin: 0;
+
+    li {
+      white-space: nowrap;
+      margin-left: 30px;
+    }
+
+    li a {
+      display: flex;
+      align-items: center;
+      align-content: center;
+    }
+  }
+
+  // test - remove after finish
+  color: white;
+}
+
+a.search {
+  font-size: 2em;
+}
+
+.search.blue {
+  position: relative;
+  top: 0;
+  left: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 1em;
+  min-height: 1em;
+  line-height: inherit;
+  background-position: center center;
+  background-repeat: no-repeat;
+  color: inherit;
+  box-sizing: border-box;
+  background-image: url("https://www.themoviedb.org/assets/2/v4/glyphicons/basic/glyphicons-basic-28-search-blue-177462d06db81ff2a02aa022c1c0be5ba4200d7bd3f51091ed9298980e3a26a1.svg");
+}
