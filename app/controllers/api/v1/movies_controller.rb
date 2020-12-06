@@ -37,5 +37,9 @@ class Api::V1::MoviesController < ApplicationController
 
   def movie_params
   	params.permit Movie::PARAMS_MOVIE
-  end
+	end
+
+	def response_movie
+		OpenStruct.new {}
+	end
 end

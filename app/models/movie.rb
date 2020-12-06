@@ -10,7 +10,7 @@ class Movie < ApplicationRecord
 	has_many :subtitles, through: :movie_subtitles
 
 	enum movie_type: [:tv_series, :movie]
-	enum satus: [:upcoming, :ongoing, :completed]
+	enum status: [:upcoming, :ongoing, :completed]
 
 	validates :title, :movie_type, :status, presence: true
 end
