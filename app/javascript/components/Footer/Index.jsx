@@ -1,10 +1,6 @@
 import React from "react";
 import "../../assets/footer.scss";
 
-// import Search from "./Search";
-// import LeftNav from "./LeftNav";
-// import RightNav from "./RightNav";
-
 const Footer = () => {
   return (
     <div className="footer">
