@@ -42,7 +42,6 @@ class Movies extends React.Component {
 				</div>
 			</div>
 		));
-		console.log(allMovies)
 
 		const noMovie = (
 			<div className="vw-100 vh-50 d-flex align-items-center justify-content-center">
