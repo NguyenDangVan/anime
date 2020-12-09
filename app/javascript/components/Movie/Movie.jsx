@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import "../assets/movie.scss";
+import "../../assets/movie.scss";
 
 class Movie extends React.Component {
 	constructor(props) {
@@ -68,7 +68,7 @@ class Movie extends React.Component {
                       Action
                     </span>
                     <span className="runtime">
-                      2h 30m
+                      "2h 30m"
                     </span>
                   </div>
                 </div>
@@ -91,11 +91,15 @@ class Movie extends React.Component {
                   </li>
                 </ul>
 
-                <div className="movie_infor">
+                <div className="movie_infor mb-5">
                   <h3>Overview</h3>
                   <div className="overview">
                     <p>{movie.content}</p>
                   </div>
+                </div>
+
+                <div className="btn btn-info watch_movie">
+                  Watch movie
                 </div>
               </div>
             </section>

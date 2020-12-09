@@ -1,7 +1,7 @@
 class Movie < ApplicationRecord
 	include ImageUploader::Attachment(:image)
 
-	PARAMS_MOVIE = %i(title original_title movie_image movie_type
+	PARAMS_MOVIE = %i(title original_title image movie_type
 	 content status rating aried ended)
 
 	has_many :movie_genres, dependent: :destroy
