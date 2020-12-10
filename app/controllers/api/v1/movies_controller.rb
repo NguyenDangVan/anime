@@ -2,11 +2,16 @@ class Api::V1::MoviesController < ApplicationController
 	before_action :load_movie, only: %i(show destroy)
 
 	def index
-  	movies = Movie.all.order created_at: :desc
-  	render json: movies
-  end
+		movies = Movie.all.order created_at: :desc
 
-  def create
+		resource = Api::V1::MovieSerializer.new(movies).serializable_hash
+
+    response = resource[:data].map{|object| object[:attributes]}
+
+  	render json: response
+	end
+
+	def create
   	movie = Movie.create! movie_params
 
   	if movie
@@ -16,7 +21,7 @@ class Api::V1::MoviesController < ApplicationController
   	end
   end
 
-  def show
+	def show
   	if @movie
   		render json: @movie
   	else
@@ -30,16 +35,11 @@ class Api::V1::MoviesController < ApplicationController
   end
 
   private
+    def load_movie
+    	@movie ||= Movie.find_by id: params[:id]
+    end
 
-  def load_movie
-  	@movie ||= Movie.find_by id: params[:id]
-  end
-
-  def movie_params
-  	params.permit Movie::PARAMS_MOVIE
-	end
-
-	def response_movie
-		OpenStruct.new {}
-	end
+    def movie_params
+    	params.permit Movie::PARAMS_MOVIE
+  	end
 end
