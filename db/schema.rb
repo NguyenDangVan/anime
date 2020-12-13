@@ -13,12 +13,13 @@
 ActiveRecord::Schema.define(version: 2020_11_23_183017) do
 
   create_table "episodes", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 ROW_FORMAT=COMPRESSED", force: :cascade do |t|
-    t.bigint "movies_id", null: false
+    t.bigint "movie_id", null: false
     t.string "title"
+    t.integer "number_ep", null: false
     t.text "videoURL"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["movies_id"], name: "index_episodes_on_movies_id"
+    t.index ["movie_id"], name: "index_episodes_on_movie_id"
   end
 
   create_table "genres", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 ROW_FORMAT=COMPRESSED", force: :cascade do |t|
@@ -81,7 +82,7 @@ ActiveRecord::Schema.define(version: 2020_11_23_183017) do
     t.index ["email"], name: "index_users_on_email"
   end
 
-  add_foreign_key "episodes", "movies", column: "movies_id"
+  add_foreign_key "episodes", "movies"
   add_foreign_key "movie_genres", "genres"
   add_foreign_key "movie_genres", "movies"
   add_foreign_key "movie_subtitles", "movies"

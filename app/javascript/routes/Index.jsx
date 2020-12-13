@@ -7,6 +7,7 @@ import Home from "../components/Home";
 import Movies from "../components/Movie/Movies";
 import Movie from "../components/Movie/Movie";
 import NewMovie from "../components/Movie/NewMovie";
+import StreamVideo from "../components/Movie/StreamVideo";
 
 // const BrowserHistory = require("react-router/lib/BrowserHistory").default;
 
@@ -21,6 +22,7 @@ export default(
 					<Route path="/movies" exact component={Movies} />
 					<Route path="/movie/:id" exact component={Movie} />
 					<Route path="/movie" exact component={NewMovie} />
+					<Route path="/movie/:id/episodes" exact component={StreamVideo} />
 				</Switch>
 		</main>
 		<Footer />
