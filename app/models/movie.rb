@@ -8,6 +8,7 @@ class Movie < ApplicationRecord
 	has_many :genres, through: :movie_genres
 	has_many :movie_subtitles, dependent: :destroy
 	has_many :subtitles, through: :movie_subtitles
+	has_many :episodes
 
 	enum movie_type: [:tv_series, :movie]
 	enum status: [:upcoming, :ongoing, :completed]

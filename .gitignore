@@ -40,4 +40,5 @@ yarn-debug.log*
 config/database.yml
 
 #yarn log
-yarn.log
+yarn.lock
+package-lock.json

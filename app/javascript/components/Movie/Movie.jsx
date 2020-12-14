@@ -98,9 +98,9 @@ class Movie extends React.Component {
                   </div>
                 </div>
 
-                <div className="btn btn-info watch_movie">
+                <Link to={`/movie/${movie.id}/episodes`} className="btn btn-info">
                   Watch movie
-                </div>
+                </Link>
               </div>
             </section>
           </div>
