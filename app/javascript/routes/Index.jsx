@@ -8,7 +8,10 @@ import Movies from "../components/Movie/Movies";
 import Movie from "../components/Movie/Movie";
 import NewMovie from "../components/Movie/NewMovie";
 import StreamVideo from "../components/Movie/StreamVideo";
+import PublicRoute from "../components/common/PublicRoute";
 
+// Login
+import LoginPage from "../components/LoginPage/Index";
 // const BrowserHistory = require("react-router/lib/BrowserHistory").default;
 
 export default(
@@ -17,13 +20,17 @@ export default(
 		<main>
 			{/* search page  */}
 			<Search />
-				<Switch>
-					<Route path="/" exact component={Home} />
-					<Route path="/movies" exact component={Movies} />
-					<Route path="/movie/:id" exact component={Movie} />
-					<Route path="/movie" exact component={NewMovie} />
-					<Route path="/movie/:id/episodes" exact component={StreamVideo} />
-				</Switch>
+			<Switch>
+				<Route path="/" exact component={Home} />
+				<Route path="/movies" exact component={Movies} />
+				<Route path="/movie/:id" exact component={Movie} />
+				<Route path="/movie" exact component={NewMovie} />
+				<Route path="/movie/:id/episodes" exact component={StreamVideo} />
+
+				{/* User */}
+				<Route path="/login" exact component={LoginPage} />
+				{/* <PublicRoute path="/login" exact component={LoginPage} /> */}
+			</Switch>
 		</main>
 		<Footer />
 	</Router>

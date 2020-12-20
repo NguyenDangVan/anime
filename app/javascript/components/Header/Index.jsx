@@ -1,12 +1,18 @@
 import React from "react";
 import "../../assets/header.scss";
 import { Link } from "react-router-dom";
+import { useSelector } from "react-redux";
+import Logged from "./Logged";
 
 // import Search from "./Search";
 // import LeftNav from "./LeftNav";
 // import RightNav from "./RightNav";
 
 const Header = () => {
+  const { user, isAuth } = useSelector(state => state.user);
+  console.log("user: ", user)
+  console.log("authen: ", isAuth)
+
   return (
     <div className="header">
       <div className="content">
@@ -26,7 +32,13 @@ const Header = () => {
           </div>
           <div className="flex">
             <ul className="primary">
-              <li>Login</li>
+              {isAuth ? (
+                <li><Logged /></li>
+              ) : (
+                <li>
+                  <Link to="/login">Login</Link>
+                </li>
+              )}
               <li>Join us</li>
               <li>
                 <a className="search">
