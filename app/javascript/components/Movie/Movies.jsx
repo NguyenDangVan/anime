@@ -39,7 +39,7 @@ class Movies extends React.Component {
 					<div className="card-body movies-image">
 						<h5 className="card-title">{movie.title}</h5>
 						<Link to={`/movie/${movie.id}`} className="btn custom-button">
-							View movie
+							View detail
 						</Link>
 					</div>
 				</div>

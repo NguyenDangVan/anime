@@ -1,0 +1,42 @@
+.container {
+	.top-title {
+		span.title {
+			font-weight: 700;
+			font-size: 2rem;
+		}
+
+		a {
+			margin-left: 1rem;
+		}
+	}
+
+	.movie-image {
+		height: 20rem;
+		cursor: pointer;
+	}
+
+	.slide-movies {
+		height: 27rem;
+	}
+
+	.item-movie {
+		height: 27rem;
+	}
+
+	.carousel-indicators {
+		top: 30rem;
+
+		li {
+			background-color: #111;
+		}
+	}
+
+	.card-body {
+		.card-title {
+			font-size: 1.3rem;
+			white-space: nowrap;
+		  overflow: hidden;
+		  text-overflow: ellipsis;
+		}
+	}
+}
