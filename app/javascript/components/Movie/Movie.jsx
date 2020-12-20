@@ -32,15 +32,15 @@ class Movie extends React.Component {
     const { movie } = this.state;
 
     return (
-      <div className="header_large">
+      <div className="header_large" styles={{ backgroundImage:`url(${movie.image_url})` }}>
         <div className="custom_bg">
           <div className="single_column">
             <section className="original_header">
               <div className="poster_wrapper">
                 <div className="poster">
                   <div className="image_content">
-                    <img src="//image.tmdb.org/t/p/w300_and_h450_bestv2/k68nPLbIST6NP96JmTxmZijEvCA.jpg"
-                      data-src="//image.tmdb.org/t/p/w300_and_h450_bestv2/k68nPLbIST6NP96JmTxmZijEvCA.jpg"
+                    <img src={movie.image_url}
+                      data-src={movie.image_url}
                       data-loaded="true">
                     </img>
                   </div>
