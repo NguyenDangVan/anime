@@ -1,0 +1,49 @@
+.container {
+  .login {
+    height: 50rem;
+  }
+
+  .form-login {
+    background: #1F1F1F;
+    border-radius: 5px;
+    padding: 2rem;
+    font-size: 14px;
+    margin: auto;
+    width: 35%;
+
+    h3 {
+      color: white;
+      font-size: 2rem;
+      text-align: center;
+    }
+
+    div {
+      padding-bottom: 1rem;
+    }
+
+    form {
+      margin-top: 1rem;
+
+      input {
+        width: 100%;
+        line-height: 3.5rem;
+        margin-bottom: 1rem;
+        border-radius: 3px;
+        border: none;
+      }
+
+      button {
+        margin-top: 1rem;
+        font-size: 14px;
+      }
+    }
+
+    .box-btn {
+      button {
+        width: 100%;
+        line-height: 3.5rem;
+        font-size: 14px;
+      }
+    }
+  }
+}

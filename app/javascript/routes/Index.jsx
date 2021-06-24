@@ -1,15 +1,37 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import Header from "../components/Header/Index";
+import Search from "../components/Search/Index";
+import Footer from "../components/Footer/Index";
 import Home from "../components/Home";
-import Movies from "../components/Movies";
-import Movie from "../components/Movie";
+import Movies from "../components/Movie/Movies";
+import Movie from "../components/Movie/Movie";
+import NewMovie from "../components/Movie/NewMovie";
+import StreamVideo from "../components/Movie/StreamVideo";
+import PublicRoute from "../components/common/PublicRoute";
+
+// Login
+import LoginPage from "../components/LoginPage/Index";
+// const BrowserHistory = require("react-router/lib/BrowserHistory").default;
 
 export default(
 	<Router>
-		<Switch>
-			<Route path="/" exact component={Home} />
-			<Route path="/movies" exact component={Movies} />
-			<Route path="/movie/:id" exact component={Movie} />
-		</Switch>
+		<Header />
+		<main>
+			{/* search page  */}
+			<Search />
+			<Switch>
+				<Route path="/" exact component={Home} />
+				<Route path="/movies" exact component={Movies} />
+				<Route path="/movie/:id" exact component={Movie} />
+				<Route path="/movie" exact component={NewMovie} />
+				<Route path="/movie/:id/episodes" exact component={StreamVideo} />
+
+				{/* User */}
+				<Route path="/login" exact component={LoginPage} />
+				{/* <PublicRoute path="/login" exact component={LoginPage} /> */}
+			</Switch>
+		</main>
+		<Footer />
 	</Router>
 );

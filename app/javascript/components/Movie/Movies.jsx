@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import "../../assets/movies.scss";
 
 class Movies extends React.Component {
 	constructor(props) {
@@ -25,24 +26,25 @@ class Movies extends React.Component {
 
 	render() {
 		const { movies } = this.state;
+		const default_image = "`https://bulma.io/images/placeholders/1280x960.png`";
+
 		const allMovies = movies.map((movie, index) => (
 			<div key={index} className="col-md-4 col-lg-4">
 				<div className="card mb-4">
 					<img
-						src={"https://3.bp.blogspot.com/-559W_r9Abrg/VcZIkBW1vUI/AAAAAAAFg0U/WlAYTzlssTo/Con-Duong-De-Vuong.jpg"}
+						src={movie.image !== null ? movie.image_url : default_image}
 						className="card-img-top"
 						alt={`${movie.title} image`}
 					/>
-					<div className="card-body">
+					<div className="card-body movies-image">
 						<h5 className="card-title">{movie.title}</h5>
 						<Link to={`/movie/${movie.id}`} className="btn custom-button">
-							View movie
+							View detail
 						</Link>
 					</div>
 				</div>
 			</div>
 		));
-		console.log(allMovies)
 
 		const noMovie = (
 			<div className="vw-100 vh-50 d-flex align-items-center justify-content-center">
@@ -69,11 +71,7 @@ class Movies extends React.Component {
 						</div>
 						<div className="row">
 							{movies.length > 0 ? allMovies : noMovie}
-							{console.log(allMovies)}
 						</div>
-						<Link to="/" className="btn btn-link">
-							Home
-						</Link>
 					</main>
 				</div>
 			</>
